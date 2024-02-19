@@ -1,31 +1,48 @@
 * {
     margin: 5px;
-    padding: 0px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .top-bar{
     display: flex;
     height: 10%;
-    margin: 10px;
+    margin: 0px;
+    background-color: rgb(25, 63, 25);
 }
 
 .logo {
-    width: 5%;
+    width: 7%;
     height: 100%;
 }
 
 .Heading {
-    width: 20%
+    margin: auto;
+    width: 23%;
+    text-align: center;
 }
 
 .nav-List{
-    width: 70%;
-    text-align: right;
+    width: 30%;
+    text-align: center;
     font-size: large;
+    margin: auto;
 }
 
-a {
-    scrollbar-highlight-color: aqua;
+.Login {
+    margin: auto;
+    width: 30%;
+    text-align:center;
+}
+
+.Image {
+    margin: 0px;
+}
+
+.Start {
+    border-radius: 0px;
+    width: 80%;
+    height: 100%;
 }
 
 button {
@@ -35,9 +52,12 @@ button {
     width: 95px;
     height: 35px;
     text-align: center;
+    color: black;
 }
 
-button:hover{
-    background-color: #04AA6D; /* Green */
-    color: white;
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    
 }
