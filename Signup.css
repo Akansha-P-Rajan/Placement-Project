@@ -1,73 +1,194 @@
-body {
-  background-color: #344a72;
-  font-family: 'Times New Roman', Times, serif;
-  display: flex;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color:#fff
 }
 
-.signup-box {
-  width: 360px;
-  height: 620px;
-  margin: auto;
-  background-color: white;
-  border-radius: 3px;
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+.img{
+    width:100%;
+    justify-content: baseline;
+    margin-top:5%;
+}
+.signup-box{
+    width: 380px;
+    height: 420px;
+    background:#1c1c1c;
+    border-radius: 8px;
+    margin: auto;
+    margin-right:15%;
+    margin-top:3%;
+}
+.signup-box::before{
+ content:'';
+ position:absolute;
+ top:-50%;
+ left:-50%;
+ width:380px;
+ height:420px;
+ background:linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+ z-index:1;
+ animation: animate 6s linear infinite;
+ animation-delay: -3s;
+}
+.borderLine
+{
+    position:absolute;
+    top:0;
+    inset:0;
+}
+.borderLine::before{
+    content:'';
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width:380px;
+    height:420px;
+    background:linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);
+    z-index:1;
+    transform-origin:bottom right;
+    animation:animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.borderLine::after{
+    content:'';
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width:380px;
+    height:420px;
+    background:linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);
+    z-index:1;
+    transform-origin:bottom right;
+    animation:animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.signup-box form {
+    position: relative;
+    inset: 4px;
+    background: #222;
+    padding: 40px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    color: white;
 }
 
-.login-box {
-  width: 360px;
-  height: 280px;
-  margin: auto;
-  border-radius: 3px;
-  background-color: white;
+.signup-box form h2{
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
 }
 
-h1 {
-  text-align: center;
-  padding-top: 15px;
+.signup-box form .inputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
 }
 
-h4 {
-  text-align: center;
+.signup-box form .inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 5px 5px 5px;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
 }
 
-form {
-  width: 300px;
-  margin-left: 20px;
+.signup-box .inputbox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 10px 10px;
+    pointer-events: none;
+    color:#fff;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
 }
 
-form label {
-  display: flex;
-  margin-top: 20px;
-  font-size: 18px;
+.signup-box form .inputBox input:valid ~ span,
+.signup-box form .inputBox input:focus ~ span
+{
+    color: #fff;
+    font-size: 0.75em;
+    transform: translate(-34px)
 }
 
-form input {
-  width: 100%;
-  padding: 7px;
-  border: none;
-  border: 1px solid gray;
-  border-radius: 6px;
-  outline: none;
+.signup-box form .inputBox i
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
 }
-input[type="button"] {
-  width: 320px;
-  height: 35px;
-  margin-top: 20px;
-  border: none;
-  background-color: #49c1a2;
-  color: white;
-  font-size: 18px;
+
+.signup-box form .inputBox input:valid ~ span,
+.signup-box form .inputBox input:focus ~ span
+{
+    height: 44px;
 }
-p {
-  text-align: center;
-  padding-top: 20px;
-  font-size: 15px;
+
+.signup-box form .links {
+    display: flex;
+    justify-content: space-between;
 }
-.para-2 {
-  text-align: center;
-  color: white;
-  font-size: 15px;
-  margin-top: -10px;
+
+.signup-box .links a
+{
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
 }
-.para-2 a {
-  color: #49c1a2;
+.signup-box form .links a:hover,
+.signup-box form .links a:nth-child(2) 
+{
+    color: #fff;
+}
+.signup-box form input[type="submit"]
+{
+    border: none;
+    outline: none;
+    padding:9px 25px;
+    background: #fff;
+    cursor:pointer;
+    font-size:0.9em;
+    border-radius:4px;
+    font-weight:600;
+    width:150px;
+    margin-top:10px;
+    color:black;
 }
