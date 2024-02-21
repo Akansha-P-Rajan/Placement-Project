@@ -15,10 +15,26 @@ body{
     min-height: 100vh;
     background: black;
 }
+
 .img{
-    width:100%;
-    justify-content: baseline;
-    margin-top:5%;
+  width:100%;
+  justify-content: baseline;
+  margin-top:5%;
+  display: flex;
+}
+
+
+.Triangle {
+  margin-left: 20px;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid #fff;
+}
+.circle {
+  height: 50px;
+  width: 50px;
+  background-color: #45f3ff;
+  border-radius: 50%;
 }
 .signup-box{
     width: 380px;
@@ -62,6 +78,7 @@ body{
 }
 .borderLine::after{
     content:'';
+    align-content: center;
     position:absolute;
     top:-50%;
     left:-50%;
